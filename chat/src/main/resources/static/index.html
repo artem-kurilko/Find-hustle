@@ -2,43 +2,75 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Chat</title>
     <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet">
-    <script src="/webjars/jquery/jquery.min.js"></script>
-    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
-    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
-    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/fonts.css">
 </head>
-<body>
+<body onload="connect()">
 
-<!-- Navigation -->
+<header class="main-header">
+    <div class="container">
+        <div class="navigation fixed-top row">
+
+            <div class="brand-logo col-1">
+                <a href="#"><img src="images/bars-solid.svg" alt="" class="logo"></a>   
+            </div>
+
+            <div class="search col-4">
+                <input type="search" placeholder="find you hustle" class="input">
+            </div>
+
+            <div class="main-nav col-7">
+                <ul>
+                    <li><a href="#">Coming Soon</a></li>
+                    <li><a href="#">Coming Soon</a></li>
+                    <li><a href="#">Coming Soon</a></li>
+                    <li><a href="#">Chat</a></li>
+                    <li><a href="#">Sign in</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
 
 <!-- Chat window -->
 <div class="chat_window">
-    <div class="top_menu">
-       
-    </div>
     <ul class="messages"></ul>
+
+    <!-- Bottom navigation -->
     <div class="bottom_wrapper clearfix">
         <div class="message_input_wrapper">
             <input id="message_input_value" class="message_input" placeholder="Type your message here..." />
         </div>
-
         <button class="send_message" onclick="sendMessage()">Send</button>
-
-        <button onclick="connect()">Connect to chat</button>
-        <button onclick="disconnect()">Disconnect from chat</button>
     </div>
 </div>
 
+<!-- Message block -->
 <div id="message_template" class="message_template">
-    <li class="message"><div class="avatar"></div>
+    <li class="message">
+        <div class="avatar"></div>
+        <div class="avatar-name">
+            <p>Carla Simova</p>
+        </div>
         <div class="text_wrapper">
-            <div class="text">Hello</div>
+            <div class="text"></div>
         </div>
     </li>
 </div>
 
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+ <script src="/webjars/jquery/jquery.min.js"></script>
+<script src="/webjars/sockjs-client/sockjs.min.js"></script>
+<script src="/webjars/stomp-websocket/stomp.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

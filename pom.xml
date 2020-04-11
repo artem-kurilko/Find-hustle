@@ -18,6 +18,12 @@
     <modules>
         <module>chat</module>
         <module>backaccount-changelog</module>
+        <module>security-core</module>
+        <module>account-management</module>
+        <module>notification-service</module>
+        <module>service</module>
+        <module>management</module>
+        <module>search-engine</module>
     </modules>
 
     <properties>

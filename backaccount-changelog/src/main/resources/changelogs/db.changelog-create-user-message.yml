@@ -1,8 +1,0 @@
-databaseChangeLog:
-    - changeSet:
-        author: findyourhustle team
-        id: create-user-message
-        changes:
-            - createTable:
-                tableName:
-                    - column: { name: , type: , constraints: {} }

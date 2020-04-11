@@ -10,33 +10,32 @@
     <script src="/webjars/stomp-websocket/stomp.min.js"></script>
     <script src="js/script.js"></script>
 </head>
-<body>
-
+<body onload="connect()">
 <!-- Navigation -->
+
 
 <!-- Chat window -->
 <div class="chat_window">
-    <div class="top_menu">
-       
-    </div>
     <ul class="messages"></ul>
+
+    <!-- Bottom navigation -->
     <div class="bottom_wrapper clearfix">
         <div class="message_input_wrapper">
             <input id="message_input_value" class="message_input" placeholder="Type your message here..." />
         </div>
-
         <button class="send_message" onclick="sendMessage()">Send</button>
-
-        <button onclick="connect()">Connect to chat</button>
-        <button onclick="sendMessage()" class="text">Send</button>
-        <button onclick="disconnect()">Disconnect from chat</button>
     </div>
 </div>
 
+<!-- Message block -->
 <div id="message_template" class="message_template">
-    <li class="message"><div class="avatar"></div>
+    <li class="message">
+        <div class="avatar"></div>
+        <div class="avatar-name">
+            <p>Carla Simova</p>
+        </div>
         <div class="text_wrapper">
-            <div class="text">Hello</div>
+            <div class="text"></div>
         </div>
     </li>
 </div>
