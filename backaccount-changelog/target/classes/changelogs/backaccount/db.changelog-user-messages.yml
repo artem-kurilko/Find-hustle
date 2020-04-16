@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+     author: Artemii Kurilko
+     id: user-message
+     changes:
+       - createTable:
+           tableName: user_message
+           columns:
+             - column: { name: id, type: BigInt, constraints: { primaryKey: true } }
+             - column: { name: user_id, type: BigInt }
+             - column: { name: message, type: text }

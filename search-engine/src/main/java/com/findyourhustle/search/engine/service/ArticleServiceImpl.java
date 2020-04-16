@@ -27,7 +27,7 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public Optional<Article> findOne(String id) {
-        return Optional.of(articleRepository.findOne(id));
+        return articleRepository.findById(id);
     }
 
     @Override

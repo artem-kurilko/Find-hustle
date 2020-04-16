@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      author: Artemii Kurilko
+      id: restriction
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: message
+            baseTableName: user_message
+            constraintName: fk_message_user
+            onDelete: CASCADE
+            onUpdate: RESTRICT
+            referencedColumnNames: user_id
+            referencedTableName: user

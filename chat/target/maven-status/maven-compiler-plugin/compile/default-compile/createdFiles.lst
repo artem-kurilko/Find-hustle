@@ -1,0 +1,3 @@
+com\findyourhustle\chat\domain\Message.class
+com\findyourhustle\chat\WebSocketConfiguration.class
+com\findyourhustle\chat\resources\ChatController.class
