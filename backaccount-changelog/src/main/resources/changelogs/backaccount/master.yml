@@ -2,3 +2,6 @@ databaseChangeLog:
   - include:
       file: db.chagelog-create-user.yml
       relativeToChangelogFile: true
+  - include:
+      file: db.changelog-restriction.yml
+      relativeToChangelogFile: true
