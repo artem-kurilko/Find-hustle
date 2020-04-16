@@ -1,0 +1,7 @@
+com\findyourhustle\search\engine\service\ArticleService.class
+com\findyourhustle\search\engine\domain\Author.class
+com\findyourhustle\search\engine\domain\Article.class
+com\findyourhustle\search\engine\repository\ArticleRepository.class
+com\findyourhustle\search\engine\configuration\SearchConfiguration.class
+com\findyourhustle\search\engine\service\ArticleServiceImpl.class
+com\findyourhustle\search\engine\domain\Person.class

@@ -7,39 +7,73 @@
     <title>Chat</title>
     <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body onload="connect()">
 
-<header class="main-header">
-    <div class="container">
-        <div class="navigation fixed-top row">
-
-            <div class="brand-logo col-1">
-                <a href="#"><img src="images/bars-solid.svg" alt="" class="logo"></a>   
-            </div>
-
-            <div class="search col-4">
-                <input type="search" placeholder="find you hustle" class="input">
-            </div>
-
-            <div class="main-nav col-7">
-                <ul>
-                    <li><a href="#">Coming Soon</a></li>
-                    <li><a href="#">Coming Soon</a></li>
-                    <li><a href="#">Coming Soon</a></li>
-                    <li><a href="#">Chat</a></li>
-                    <li><a href="#">Sign in</a></li>
-                    <li><a href="#">Register</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</header>
-
 <!-- Chat window -->
 <div class="chat_window">
+
+    <!-- HEADER -->
+    <header class="main-header">
+        <div class="container">
+            <div class="navigation fixed-top row">
+                <div class="brand-logo col-1">
+                    <span onclick="onCount(this)"><img src="images/bars-solid.svg" alt="" class="logo"></span>
+                </div>
+
+                <div class="search col-4">
+                    <form>
+                      <input type="text" placeholder="find your hustle">
+                      <button type="submit"></button>
+                    </form>
+                </div>
+
+                <!-- BURGER MENU -->
+                <div id="mySidenav" class="sidenav">
+                      <a href="#">Coming soon*</a>
+                      <a href="#">Coming soon*</a>
+                      <a href="#">Coming soon*</a>
+                      <a href="#">Chat</a>
+                      <a href="#">Sign in</a>
+                      <a href="#">Register</a>
+                </div>
+
+                <!-- AUTHORIZATION -->
+                <div id="myModal" class="modal">
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h1>Find your hustle</h1>
+
+                    <form method="post" action="#" th:action="@{/user-create}" th:object=${user}>
+                        <input type="text" placeholder="Your email address"><br>
+                        <input type="text" placeholder="Password"><br>
+                        <button type="submit">Join Find your hustle</button>
+                    </form>
+                  </div>
+                </div>
+
+                <!-- Nav -->
+                <div class="main-nav col-7">
+                    <ul>
+                        <li><a href="#">Coming Soon*</a></li>
+                        <li><a href="#">Coming Soon*</a></li>
+                        <li><a href="#">Coming Soon*</a></li>
+                        <li><a href="E://find your hustle/backaccount-services/chat/src/main/resources/static/index.html">Chat</a></li>
+                        <li><a href="#">Sign in</a></li>
+                        <li>
+                            <button type="text" class="register" id="myBtn">
+                                Register
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <ul class="messages"></ul>
 
     <!-- Bottom navigation -->

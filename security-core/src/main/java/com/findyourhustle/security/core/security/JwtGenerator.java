@@ -1,6 +1,6 @@
 package com.findyourhustle.security.core.security;
 
-import com.findyourhustle.security.core.model.JwtUser;
+import com.findyourhustle.security.core.domain.JwtUser;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

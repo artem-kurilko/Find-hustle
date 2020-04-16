@@ -1,0 +1,4 @@
+databaseChangeLog:
+  - include:
+      file: db.chagelog-create-user.yml
+      relativeToChangelogFile: true
