@@ -1,4 +1,4 @@
-package com.findyourhustle.service;
+package com.findyourhustle;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,6 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 class BackAccountMain{
 
 	public static void main(String[] args) {
-		SpringApplication.run(BackAccountMain.class, args);
+		SpringApplication.run(BackAccountMain.class,args);
 	}
 }

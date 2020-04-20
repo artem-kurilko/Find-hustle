@@ -1,6 +1,6 @@
-package com.findyourhustle.security.core.security;
+package com.findyourhustle.jwtsecurity.security;
 
-import com.findyourhustle.security.core.domain.JwtUser;
+import com.findyourhustle.jwtsecurity.model.JwtUser;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import org.springframework.stereotype.Component;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class JwtValidator {
 
 
-    private String secret = "aSdfe2kkE";
+    private String secret = "youtube";
 
     public JwtUser validate(String token) {
 
@@ -27,7 +27,7 @@ public class JwtValidator {
             jwtUser.setRole((String) body.get("role"));
         }
         catch (Exception e) {
-            e.printStackTrace();
+            System.out.println(e);
         }
 
         return jwtUser;

@@ -1,6 +1,6 @@
-package com.findyourhustle.security.core.security;
+package com.findyourhustle.jwtsecurity.security;
 
-import com.findyourhustle.security.core.domain.JwtUser;
+import com.findyourhustle.jwtsecurity.model.JwtUser;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -9,11 +9,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class JwtGenerator {
 
+
     public String generate(JwtUser jwtUser) {
+
+
         Claims claims = Jwts.claims()
                 .setSubject(jwtUser.getUserName());
         claims.put("userId", String.valueOf(jwtUser.getId()));
         claims.put("role", jwtUser.getRole());
+
 
         return Jwts.builder()
                 .setClaims(claims)

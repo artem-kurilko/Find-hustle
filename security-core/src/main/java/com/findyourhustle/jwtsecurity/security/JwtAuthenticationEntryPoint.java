@@ -1,4 +1,4 @@
-package com.findyourhustle.security.core.security;
+package com.findyourhustle.jwtsecurity.security;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;

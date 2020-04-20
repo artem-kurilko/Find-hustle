@@ -1,6 +1,6 @@
-package com.findyourhustle.security.core.security;
+package com.findyourhustle.jwtsecurity.security;
 
-import com.findyourhustle.security.core.domain.JwtAuthenticationToken;
+import com.findyourhustle.jwtsecurity.model.JwtAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter;

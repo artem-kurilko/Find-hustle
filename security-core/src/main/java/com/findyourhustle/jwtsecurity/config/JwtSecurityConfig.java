@@ -1,9 +1,9 @@
-package com.findyourhustle.security.core.config;
+package com.findyourhustle.jwtsecurity.config;
 
-import com.findyourhustle.security.core.security.JwtAuthenticationEntryPoint;
-import com.findyourhustle.security.core.security.JwtAuthenticationProvider;
-import com.findyourhustle.security.core.security.JwtAuthenticationTokenFilter;
-import com.findyourhustle.security.core.security.JwtSuccessHandler;
+import com.findyourhustle.jwtsecurity.security.JwtAuthenticationEntryPoint;
+import com.findyourhustle.jwtsecurity.security.JwtAuthenticationProvider;
+import com.findyourhustle.jwtsecurity.security.JwtAuthenticationTokenFilter;
+import com.findyourhustle.jwtsecurity.security.JwtSuccessHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,7 +21,7 @@ import java.util.Collections;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 @EnableWebSecurity
 @Configuration
-public class JwtSecurityConfiguration extends WebSecurityConfigurerAdapter {
+public class JwtSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private JwtAuthenticationProvider authenticationProvider;
@@ -45,9 +45,6 @@ public class JwtSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-       /* http.authorizeRequests()
-                .antMatchers("/account").hasAuthority(SYSTEM_USER)
-                .antMatchers("/**").permitAll();*/
 
         http.csrf().disable()
                 .authorizeRequests().antMatchers("**/rest/**").authenticated()
@@ -58,5 +55,6 @@ public class JwtSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
         http.addFilterBefore(authenticationTokenFilter(), UsernamePasswordAuthenticationFilter.class);
         http.headers().cacheControl();
+
     }
 }

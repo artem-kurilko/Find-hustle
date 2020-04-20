@@ -8,15 +8,14 @@
     <artifactId>backaccount-services</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
-
     <modules>
-        <module>chat</module>
         <module>backaccount-changelog</module>
-        <module>security-core</module>
-        <module>notification-service</module>
-        <module>service</module>
+        <module>chat</module>
         <module>management</module>
+        <module>notification-service</module>
         <module>search-engine</module>
+        <module>security-core</module>
+        <module>service</module>
     </modules>
 
     <properties>
@@ -33,5 +32,4 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-
 </project>

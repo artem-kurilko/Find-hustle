@@ -1,4 +1,4 @@
-package com.findyourhustle.security.core.domain;
+package com.findyourhustle.jwtsecurity.model;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
