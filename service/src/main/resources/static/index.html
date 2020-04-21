@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Find your hustle</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/normalize.css">
+</head>
+<body>
+	<!-- HEADER -->
+	<header class="main-header">
+		<div class="container">
+			<div class="navigation fixed-top row">
+
+				<!-- ICON -->
+				<div class="brand-logo col-1">
+					<span onclick="onCount(this)"><img src="images/menu.png" alt="" class="logo"></span>
+				</div>
+
+				<!-- SEARCH -->
+				<div class="search col-4">
+					<form>
+					  <input type="text" placeholder="find your hustle">
+					  <button type="submit"></button>
+					</form>
+				</div>
+
+				<!-- BURGER MENU -->
+				<div id="mySidenav" class="sidenav">
+					  <a href="#">Coming soon*</a>
+					  <a href="#">Coming soon*</a>
+					  <a href="E://find your hustle/find-your-hustle-ui/src/modules/Resources/index.html">Resources</a>
+					  <a href="#">Chat</a>
+					  <a href="#">Sign in</a>
+					  <a href="#">Register</a>
+				</div>
+
+				<!-- AUTHORIZATION -->
+				<div id="myModal" class="modal">
+				  <div class="modal-content">
+				    <span class="close">&times;</span>
+				    <h1>Find your hustle</h1>
+
+					<form method="post" action="#"
+						  th:action="@{/user-create}" 
+						  th:object=${user}>
+						
+						<input type="text" placeholder="Your email address" th:field=*{email}><br>
+						<input type="text" placeholder="Password" th:th:field=*{password}><br>
+						<button type="submit">Join Find your hustle</button>
+					</form>
+				  </div>
+				</div>
+
+				<!-- UNIT DESCRIPTION -->
+				<div class="unit-description">
+					<span class="close-description">&times;</span>
+					<ul>
+						<li><a href="#">Info</a></li>
+						<li><a href="#">Resources</a></li>
+						<li><a href="#">Cases</a></li>
+						<li><a href="#">Remote</a></li>
+						<li><a href="#">Chat</a></li>
+					</ul>			
+				</div>
+
+				<!-- NAV -->
+				<div class="main-nav col-7">
+					<ul>
+						<li><a href="#" id="comingSoonBtn1">Coming Soon*</a></li>
+						<li><a href="#" id="comingSoonBtn2">Coming Soon*</a></li>
+						<li><a
+							id="resourcesBtn" 
+							href="E://find your hustle/find-your-hustle-ui/src/modules/Resources/index.html">Resources</a></li>
+						<li><a id="chatBtn" href="E://find your hustle/backaccount-services/chat/src/main/resources/static/index.html">Chat</a></li>
+						<li><a href="#" id="signBtn">Sign in</a></li>
+						<li>
+							<button type="text" class="register" id="registerBtn">
+								Register
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="main-window">
+				<div class="row">
+					<div class="text">
+						<h1>Find your hustle</h1>
+						<p>Live anywhere and join the new rich</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+				
+
+	<!-- FILTERS  -->
+	<div class="filters row">
+		<div class="col-12">
+			
+		</div>		
+	</div>
+ 
+
+
+    <!-- UNIT LIST -->
+	<div class="unit-container">
+			<div class="unit">
+				<a href="#">
+					<div class="disable-image programmer">
+						<img src="images/units/programmer.png" alt="">
+						<h1>Programmer</h1>
+					</div>
+
+					<div class="hover-image">
+						<div class="menu">
+							<img src="images/units/pattern/like.png" alt="" class="like">
+							<img src="images/units/pattern/close.png" alt="" class="close">
+						</div>
+
+						<ul>
+							<li>Risk<div class="line">
+								<div class="color-line"></div>
+							</div> </li> 
+
+							<li>Competition<div class="line">
+								<div class="color-line"></div>
+							</div></li> 
+
+							<li>Revenue<div class="line">
+								<div class="color-line"></div>
+							</div></li> 
+
+							<li>Price<div class="line">
+								<div class="color-line"></div>
+							</div></li> 
+
+							<li>Time<div class="line">
+								<div class="color-line"></div>
+							</div></li>
+						</ul>	
+					</div>
+				</a>
+			</div>
+
+<div class="unit">
+				<a href="#">
+					<div class="disable-image programmer">
+						<img src="images/units/programmer.png" alt="">
+						<h1>Programmer</h1>
+					</div>
+
+					<div class="hover-image">
+						<div class="menu">
+							<img src="images/units/pattern/like.png" alt="" class="like">
+							<img src="images/units/pattern/close.png" alt="" class="close">
+						</div>
+
+						<ul>
+							<li>Risk<div class="line">
+								<div class="color-line"></div>
+							</div> </li> 
+
+							<li>Competition<div class="line">
+								<div class="color-line"></div>
+							</div></li> 
+
+							<li>Revenue<div class="line">
+								<div class="color-line"></div>
+							</div></li> 
+
+							<li>Price<div class="line">
+								<div class="color-line"></div>
+							</div></li> 
+
+							<li>Time<div class="line">
+								<div class="color-line"></div>
+							</div></li>
+						</ul>	
+					</div>
+				</a>
+			</div>
+
+			<div class="unit">
+				<a href="#">
+					<div class="disable-image programmer">
+						<img src="images/units/programmer.png" alt="">
+						<h1>Programmer</h1>
+					</div>
+
+					<div class="hover-image">
+						<div class="menu">
+							<img src="images/units/pattern/like.png" alt="" class="like">
+							<img src="images/units/pattern/close.png" alt="" class="close">
+						</div>
+
+						<ul>
+							<li>Risk<div class="line">
+								<div class="color-line"></div>
+							</div> </li> 
+
+							<li>Competition<div class="line">
+								<div class="color-line"></div>
+							</div></li> 
+
+							<li>Revenue<div class="line">
+								<div class="color-line"></div>
+							</div></li> 
+
+							<li>Price<div class="line">
+								<div class="color-line"></div>
+							</div></li> 
+
+							<li>Time<div class="line">
+								<div class="color-line"></div>
+							</div></li>
+						</ul>	
+					</div>
+				</a>
+			</div>
+
+			<div class="unit">
+				<a href="#">
+					<div class="disable-image programmer">
+						<img src="images/units/programmer.png" alt="">
+						<h1>Programmer</h1>
+					</div>
+
+					<div class="hover-image">
+						<div class="menu">
+							<img src="images/units/pattern/like.png" alt="" class="like">
+							<img src="images/units/pattern/close.png" alt="" class="close">
+						</div>
+
+						<ul>
+							<li>Risk<div class="line">
+								<div class="color-line"></div>
+							</div> </li> 
+
+							<li>Competition<div class="line">
+								<div class="color-line"></div>
+							</div></li> 
+
+							<li>Revenue<div class="line">
+								<div class="color-line"></div>
+							</div></li> 
+
+							<li>Price<div class="line">
+								<div class="color-line"></div>
+							</div></li> 
+
+							<li>Time<div class="line">
+								<div class="color-line"></div>
+							</div></li>
+						</ul>	
+					</div>
+				</a>
+			</div>
+
+			<div class="unit">
+				<a href="#">
+					<div class="disable-image programmer">
+						<img src="images/units/programmer.png" alt="">
+						<h1>Programmer</h1>
+					</div>
+
+					<div class="hover-image">
+						<div class="menu">
+							<img src="images/units/pattern/like.png" alt="" class="like">
+							<img src="images/units/pattern/close.png" alt="" class="close">
+						</div>
+
+						<ul>
+							<li>Risk<div class="line">
+								<div class="color-line"></div>
+							</div> </li> 
+
+							<li>Competition<div class="line">
+								<div class="color-line"></div>
+							</div></li> 
+
+							<li>Revenue<div class="line">
+								<div class="color-line"></div>
+							</div></li> 
+
+							<li>Price<div class="line">
+								<div class="color-line"></div>
+							</div></li> 
+
+							<li>Time<div class="line">
+								<div class="color-line"></div>
+							</div></li>
+						</ul>	
+					</div>
+				</a>
+			</div>
+			
+	</div> 
+
+
+
+
+<!-- SCRIPTS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
