@@ -5,3 +5,6 @@ databaseChangeLog:
   - include:
       file: db.changelog-restriction.yml
       relativeToChangelogFile: true
+  - include:
+      file: db.changelog-user-messages.yml
+      relativeToChangelogFile: true

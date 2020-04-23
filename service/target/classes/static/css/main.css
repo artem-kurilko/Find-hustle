@@ -1,5 +1,5 @@
-/**/ #FFC924 
-/**/ #FF4742
+/* #FFC924 */
+/* #FF4742 */
 
 /*================ COMMONS ================*/
 *{
@@ -64,14 +64,14 @@ header{
   padding-left: 10px;
   outline: none;
   background: #ececed;
-  color: #fff;
+  color: #5F5F5F;
 }
 
 .search button {
   position: absolute; 
   padding-right: 12px;
   top: 0;
-  right: 0px;
+  right: 0;
   width: 42px;
   height: 38px;
   border: none;
@@ -188,7 +188,6 @@ header{
 }
 
 .modal .modal-content form input{
-	padding-left: ;
 	border: 1px solid #aaaaaa;
 	padding-left: 10px;
   	outline: none;
@@ -263,7 +262,6 @@ header{
 .disable-image h1{
 	font-size: 28px;
 	position: absolute;
-	font-size: 28px;
 	margin-top: 28px;
 	width: 100%;
 	top: 0;
@@ -288,8 +286,7 @@ header{
 	-webkit-transition: all 400ms ease-out;
 	-moz-transition: all 400ms ease-out;
 	-o-transition: all 400ms ease-out;
-	-ms-transition: all 400ms ease-out;
-	transition: all 400ms ease-out; */
+	transition: all 400ms ease-out;
 } 
 
 .hover-image:hover{
@@ -487,7 +484,7 @@ header{
 	}
 }
 
-@media and screen only (max-width: 850px){
+@media only screen and (max-width: 850px){
 	.unit-container{
 		grid-template-columns: repeat(2, 1fr);
 	}
@@ -500,7 +497,7 @@ header{
 }
 
 /* Small Devices, Tablets */
-@media only screen and (min-width: 768px) and (max-width: 991.98px){
+@media only screen and (min-width: 768px) and (max-width: 992px){
 
 }
 

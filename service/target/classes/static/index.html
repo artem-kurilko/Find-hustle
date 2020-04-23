@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<!--<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/">-->
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -46,14 +47,21 @@
 				    <span class="close">&times;</span>
 				    <h1>Find your hustle</h1>
 
-					<form method="post" action="#"
-						  th:action="@{/user-create}" 
-						  th:object=${user}>
+					<form action="#" th:action="@{/users}" th:object="${user}" method="post">
 						
-						<input type="text" placeholder="Your email address" th:field=*{email}><br>
-						<input type="text" placeholder="Password" th:th:field=*{password}><br>
+						<input type="text" placeholder="Your email address" th:field="*{email}"><br>
+						<input type="text" placeholder="Password" th:field="*{password}"><br>
 						<button type="submit">Join Find your hustle</button>
 					</form>
+
+					  <!--<form method="post"
+							action="/users/me"
+							th:object=${user}>
+
+						  <input type="text" placeholder="Your email address" th:field=*{email}><br>
+						  <input type="text" placeholder="Password" th:th:field=*{password}><br>
+						  <button type="submit">Join Find your hustle</button>
+					  </form>-->
 				  </div>
 				</div>
 

@@ -1,4 +1,4 @@
-package com.findyourhustle.jwtsecurity.controller;
+package com.findyourhustle.jwtsecurity.resources;
 
 import com.findyourhustle.jwtsecurity.model.JwtUser;
 import com.findyourhustle.jwtsecurity.security.JwtGenerator;

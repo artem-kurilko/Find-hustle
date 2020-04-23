@@ -2,25 +2,45 @@ package com.findyourhustle.management.resources;
 
 import com.findyourhustle.management.domain.User;
 import com.findyourhustle.management.services.UserService;
+import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
-@Controller
+import javax.validation.Valid;
+
+@RestController
+@RequestMapping(value = "/users")
 public class UserController {
 
-    private UserService userService;
+    private final UserService userService;
 
     @Autowired
     public UserController(UserService userService){
         this.userService = userService;
     }
 
-    @PostMapping("/user-create")
-    public String createUserForm(User user){
-        if (user != null) {
-            userService.saveUser(user);
+    @PostMapping("/me")
+    public User getUser(@Valid @RequestBody User user){
+        if (user == null){
+            try {
+                throw new NotFoundException("Not valid user attributes.");
+            } catch (NotFoundException e) {
+                e.printStackTrace();
+            }
         }
-        return "/user-create";
+
+        return userService.findById(user.getUserId());
+    }
+
+    @PostMapping
+    public String createUser(@Valid @RequestBody User user){
+        if (user == null){
+            try {
+                throw new NotFoundException("Not valid user attributes.");
+            } catch (NotFoundException e){
+                e.printStackTrace();}
+        }
+        userService.saveUser(user);
+        return user.toString();
     }
 }

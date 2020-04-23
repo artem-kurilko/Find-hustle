@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-unit
+      author: Kurilko Artemii
+      changes:
+        - createTable:
+            tableName: unit
+            columns:
+              - column: {}
+
