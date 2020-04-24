@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en">
 
-<!--<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/">-->
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -44,13 +43,15 @@
 				<!-- AUTHORIZATION -->
 				<div id="myModal" class="modal">
 				  <div class="modal-content">
-				    <span class="close">&times;</span>
-				    <h1>Find your hustle</h1>
+				  	<span class="close">&times;</span>
+				    <div class="header-title">
+				    	<h1>Find your hustle</h1>
+					</div>
 
-					<form action="#" th:action="@{/users}" th:object="${user}" method="post">
-						
-						<input type="text" placeholder="Your email address" th:field="*{email}"><br>
-						<input type="text" placeholder="Password" th:field="*{password}"><br>
+					<form method="post"
+						  action="/users">
+							<input type="text" name="email" placeholder="Your email address"><br>
+						<input type="text" name="password" placeholder="Password"><br>
 						<button type="submit">Join Find your hustle</button>
 					</form>
 
@@ -68,13 +69,35 @@
 				<!-- UNIT DESCRIPTION -->
 				<div class="unit-description">
 					<span class="close-description">&times;</span>
-					<ul>
+					<ul class="nav">
 						<li><a href="#">Info</a></li>
 						<li><a href="#">Resources</a></li>
 						<li><a href="#">Cases</a></li>
 						<li><a href="#">Remote</a></li>
 						<li><a href="#">Chat</a></li>
-					</ul>			
+					</ul>
+					
+					<ul class="description-container">
+						<li>Risk<div class="line">
+						<div class="color-line"></div>
+						</div></li> 
+
+						<li>Competition<div class="line">
+						<div class="color-line"></div>
+						</div></li> 
+
+						<div class="horizontal-line"></div>
+
+						<li>Revenue<div class="line">
+						<div class="color-line"></div>
+						</div></li> 
+		
+						<li>Price<div class="line"><div class="color-line"></div>
+						</div></li> 
+
+						<li>Time<div class="line"><div class="color-line"></div>
+						</div></li>
+					</ul>		
 				</div>
 
 				<!-- NAV -->
@@ -86,9 +109,9 @@
 							id="resourcesBtn" 
 							href="E://find your hustle/find-your-hustle-ui/src/modules/Resources/index.html">Resources</a></li>
 						<li><a id="chatBtn" href="E://find your hustle/backaccount-services/chat/src/main/resources/static/index.html">Chat</a></li>
-						<li><a href="#" id="signBtn">Sign in</a></li>
+						<li><a href="#" class="signBtn">Sign in</a></li>
 						<li>
-							<button type="text" class="register" id="registerBtn">
+							<button type="text" class="register signBtn">
 								Register
 							</button>
 						</li>
@@ -123,7 +146,7 @@
 				<a href="#">
 					<div class="disable-image programmer">
 						<img src="images/units/programmer.png" alt="">
-						<h1>Programmer</h1>
+						<h1>Программирование</h1>
 					</div>
 
 					<div class="hover-image">
@@ -133,23 +156,23 @@
 						</div>
 
 						<ul>
-							<li>Risk<div class="line">
+							<li>Риск<div class="line">
 								<div class="color-line"></div>
 							</div> </li> 
 
-							<li>Competition<div class="line">
+							<li>Конкуренция<div class="line">
 								<div class="color-line"></div>
 							</div></li> 
 
-							<li>Revenue<div class="line">
+							<li>Доходность<div class="line">
 								<div class="color-line"></div>
 							</div></li> 
 
-							<li>Price<div class="line">
+							<li>Инвестиции<div class="line">
 								<div class="color-line"></div>
 							</div></li> 
 
-							<li>Time<div class="line">
+							<li>Время<div class="line">
 								<div class="color-line"></div>
 							</div></li>
 						</ul>	
@@ -157,11 +180,11 @@
 				</a>
 			</div>
 
-<div class="unit">
+			<div class="unit">
 				<a href="#">
-					<div class="disable-image programmer">
-						<img src="images/units/programmer.png" alt="">
-						<h1>Programmer</h1>
+					<div class="disable-image trading">
+						<img src="images/units/stocks/stocks.png" alt="">
+						<h1>Торговля акциями</h1>
 					</div>
 
 					<div class="hover-image">
@@ -171,23 +194,99 @@
 						</div>
 
 						<ul>
-							<li>Risk<div class="line">
+							<li>Риск<div class="line">
 								<div class="color-line"></div>
 							</div> </li> 
 
-							<li>Competition<div class="line">
+							<li>Конкуренция<div class="line">
 								<div class="color-line"></div>
 							</div></li> 
 
-							<li>Revenue<div class="line">
+							<li>Доходность<div class="line">
 								<div class="color-line"></div>
 							</div></li> 
 
-							<li>Price<div class="line">
+							<li>Инвестиции<div class="line">
 								<div class="color-line"></div>
 							</div></li> 
 
-							<li>Time<div class="line">
+							<li>Время<div class="line">
+								<div class="color-line"></div>
+							</div></li>
+						</ul>	
+					</div>
+				</a>
+			</div>
+
+			<div class="unit">
+				<a href="#">
+					<div class="disable-image carsales">
+						<img src="images/units/autosales/autosale.png" alt="">
+						<h1>Продажа машин</h1>
+					</div>
+
+					<div class="hover-image">
+						<div class="menu">
+							<img src="images/units/pattern/like.png" alt="" class="like">
+							<img src="images/units/pattern/close.png" alt="" class="close">
+						</div>
+
+						<ul>
+							<li>Риск<div class="line">
+								<div class="color-line"></div>
+							</div> </li> 
+
+							<li>Конкуренция<div class="line">
+								<div class="color-line"></div>
+							</div></li> 
+
+							<li>Доходность<div class="line">
+								<div class="color-line"></div>
+							</div></li> 
+
+							<li>Инвестиции<div class="line">
+								<div class="color-line"></div>
+							</div></li> 
+
+							<li>Время<div class="line">
+								<div class="color-line"></div>
+							</div></li>
+						</ul>	
+					</div>
+				</a>
+			</div>
+
+			<div class="unit">
+				<a href="#">
+					<div class="disable-image solarpanels">
+						<img src="images/units/solarpanels/solarpanels.png" alt="">
+						<h1>Солнечные панели</h1>
+					</div>
+
+					<div class="hover-image">
+						<div class="menu">
+							<img src="images/units/pattern/like.png" alt="" class="like">
+							<img src="images/units/pattern/close.png" alt="" class="close">
+						</div>
+
+						<ul>
+							<li>Риск<div class="line">
+								<div class="color-line"></div>
+							</div> </li> 
+
+							<li>Конкуренция<div class="line">
+								<div class="color-line"></div>
+							</div></li> 
+
+							<li>Доходность<div class="line">
+								<div class="color-line"></div>
+							</div></li> 
+
+							<li>Инвестиции<div class="line">
+								<div class="color-line"></div>
+							</div></li> 
+
+							<li>Время<div class="line">
 								<div class="color-line"></div>
 							</div></li>
 						</ul>	
@@ -199,7 +298,7 @@
 				<a href="#">
 					<div class="disable-image programmer">
 						<img src="images/units/programmer.png" alt="">
-						<h1>Programmer</h1>
+						<h1>Программирование</h1>
 					</div>
 
 					<div class="hover-image">
@@ -209,99 +308,23 @@
 						</div>
 
 						<ul>
-							<li>Risk<div class="line">
+							<li>Риск<div class="line">
 								<div class="color-line"></div>
 							</div> </li> 
 
-							<li>Competition<div class="line">
+							<li>Конкуренция<div class="line">
 								<div class="color-line"></div>
 							</div></li> 
 
-							<li>Revenue<div class="line">
+							<li>Доходность<div class="line">
 								<div class="color-line"></div>
 							</div></li> 
 
-							<li>Price<div class="line">
+							<li>Инвестиции<div class="line">
 								<div class="color-line"></div>
 							</div></li> 
 
-							<li>Time<div class="line">
-								<div class="color-line"></div>
-							</div></li>
-						</ul>	
-					</div>
-				</a>
-			</div>
-
-			<div class="unit">
-				<a href="#">
-					<div class="disable-image programmer">
-						<img src="images/units/programmer.png" alt="">
-						<h1>Programmer</h1>
-					</div>
-
-					<div class="hover-image">
-						<div class="menu">
-							<img src="images/units/pattern/like.png" alt="" class="like">
-							<img src="images/units/pattern/close.png" alt="" class="close">
-						</div>
-
-						<ul>
-							<li>Risk<div class="line">
-								<div class="color-line"></div>
-							</div> </li> 
-
-							<li>Competition<div class="line">
-								<div class="color-line"></div>
-							</div></li> 
-
-							<li>Revenue<div class="line">
-								<div class="color-line"></div>
-							</div></li> 
-
-							<li>Price<div class="line">
-								<div class="color-line"></div>
-							</div></li> 
-
-							<li>Time<div class="line">
-								<div class="color-line"></div>
-							</div></li>
-						</ul>	
-					</div>
-				</a>
-			</div>
-
-			<div class="unit">
-				<a href="#">
-					<div class="disable-image programmer">
-						<img src="images/units/programmer.png" alt="">
-						<h1>Programmer</h1>
-					</div>
-
-					<div class="hover-image">
-						<div class="menu">
-							<img src="images/units/pattern/like.png" alt="" class="like">
-							<img src="images/units/pattern/close.png" alt="" class="close">
-						</div>
-
-						<ul>
-							<li>Risk<div class="line">
-								<div class="color-line"></div>
-							</div> </li> 
-
-							<li>Competition<div class="line">
-								<div class="color-line"></div>
-							</div></li> 
-
-							<li>Revenue<div class="line">
-								<div class="color-line"></div>
-							</div></li> 
-
-							<li>Price<div class="line">
-								<div class="color-line"></div>
-							</div></li> 
-
-							<li>Time<div class="line">
+							<li>Время<div class="line">
 								<div class="color-line"></div>
 							</div></li>
 						</ul>	

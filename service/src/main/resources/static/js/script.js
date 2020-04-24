@@ -1,12 +1,14 @@
 // Authorization
 var modal = document.getElementById("myModal");
 
-var btn = document.getElementById("registerBtn");
+var signBtn = document.getElementsByClassName("signBtn");
 
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsByClassName("closeRegisterWindow")[0];
 
-btn.onclick = function() {
-  modal.style.display = "block";
+for (var i = 0; i < signBtn.length; i++) {
+  signBtn[i].onclick = function() {
+    modal.style.display = "block";
+  }
 }
 
 span.onclick = function() {
@@ -43,7 +45,7 @@ var unitDescription = document.getElementsByClassName('unit-description')[0];
 
 var unitBtn = document.getElementsByClassName('hover-image');
 
-var closeBtn = document.getElementsByClassName('close-description')[0];
+var closeBtn = document.getElementsByClassName("close-description")[0];
 
 for (var i = 0; i <unitBtn.length; i++) {
         unitBtn[i].onclick = function(){

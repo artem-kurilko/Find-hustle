@@ -1,12 +1,14 @@
 // Authorization
 var modal = document.getElementById("myModal");
 
-var btn = document.getElementById("registerBtn");
+var signBtn = document.getElementsByClassName("signBtn");
 
 var span = document.getElementsByClassName("close")[0];
 
-btn.onclick = function() {
-  modal.style.display = "block";
+for (var i = 0; i < signBtn.length; i++) {
+  signBtn[i].onclick = function() {
+    modal.style.display = "block";
+  }
 }
 
 span.onclick = function() {
@@ -18,6 +20,8 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
 
 // Burger menu
 function onCount(t){

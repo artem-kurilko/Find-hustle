@@ -18,6 +18,10 @@ a{
 	text-decoration: none;
 }
 
+a:hover{
+	text-decoration: none;
+}
+
 input, button, submit{
 	outline: inherit;
 	border: none;
@@ -35,18 +39,21 @@ header{
 	margin-bottom: 40px;
 }
 .main-header .navigation{
+	overflow-y: hidden;
 	position: fixed;
 	margin-top: 30px;
 }
 
 /* LOGO */
 .brand-logo .logo{
+	
 	margin-top: 7px;
 	margin-left: 72px;
 }
 
-.brand-logo{
-	z-index: 10;
+.brand-logo img{
+	position: relative;
+	z-index: 9000;	
 }
 
 /* SEARCH */
@@ -119,13 +126,14 @@ header{
 
 /*================ BURGER MENU ================*/
 .sidenav {
+  z-index: 1040;	
   height: 100vh;
   width: 0;
   position: fixed;
   top: 0;
   left: 0;
   opacity: 1;
-  background-color: #fff;
+  background-color: #a3a3a3;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
   overflow-x: hidden;
   transition: 0.4s;
@@ -136,7 +144,7 @@ header{
   padding: 8px 8px 8px 72px;
   text-decoration: none;
   font-size: 16px;
-  color: #818181;
+  color: #fff;
   display: block;
   transition: 0.3s;
 }
@@ -151,37 +159,52 @@ header{
   top: 0;
   width: 100%; 
   height: 100%; 
-  background-color: rgba(0,0,0,0.4); 
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .modal-content {
   background-color: #fefefe;
   margin: auto;
-  padding: 20px;
+  padding: 40px;
   border: 1px solid #888;
   width: 478px;
   height: 576px;
 }
 
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+.modal-content .header-title{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 160px;
+	background: #008abc; 
+	border-radius: 4px;
 }
 
-.close:hover,
-.close:focus {
+/* The Close Button */
+.closeRegisterWindow {
+  z-index: 1;
+  margin-top: -20px;
+  margin-left: 390px;
+  font-size: 34px;
+}
+
+.closeRegisterWindow:hover,
+.closeRegisterWindow:focus {
   text-decoration: none;
   cursor: pointer;
 }
 
-.modal .modal-content h1{
+.modal-content .header-title h1{
+	padding: 40px;
+	color: #fff;
 	text-align: center;
 }
 
 .modal .modal-content form{
+	padding-top: 40px;
 	text-align: center;
 	margin-top: 140px;
 	margin-bottom: 60px;
@@ -198,6 +221,7 @@ header{
 }
 
 .modal .modal-content form button{
+	margin-top: 14px;
 	font-size: 18px;
 	font-weight: 400;
 	color: #fff;
@@ -206,7 +230,14 @@ header{
 	border-radius: 4px;
 	height: 64px;
 	padding: 21px 14px 21px 14px;
+	border: 1px solid #008abc;
 	background: #008abc;
+}
+
+.modal .modal-content form button:hover{
+	color: #008abc;	
+	background: #fff;
+	transition: 0.3s;
 }
 
 /*================ MAIN TITLE ================*/
@@ -260,10 +291,12 @@ header{
 }
 
 .disable-image h1{
-	font-size: 28px;
+	text-shadow: 1.5px 1.5px #000;
+	font-size: 24px;
 	position: absolute;
-	margin-top: 28px;
+	margin-top: 48px;
 	width: 100%;
+	font-weight: 400;
 	top: 0;
 	text-align: center;
 	color: #fff;
@@ -297,28 +330,33 @@ header{
 	opacity: 0;
 }
 
-.hover-image .menu{
+/*.hover-image */
+.menu{
 	margin: 12px 16px 12px 16px;
 }
 
-.hover-image .menu .like{
+/*.hover-image */
+.menu .like{
 	width: 24px;
 	height: 24px;
 } 
 
-.hover-image .menu .close{
-	width: 23px;
-	height: 23px;
+/*.hover-image */
+.menu .close{
+	width: 21px;
+	height: 21px;
 	opacity: 1;
 } 
 
-.hover-image .menu .close:hover{
+/*.hover-image */
+.menu .close:hover{
 	opacity: 1;
 } 
 
 .hover-image ul li{
+	text-shadow: 1px 1px #000;
 	padding-bottom: 7px;
-	margin-left: 4px;
+	margin-left: 3px;
 	font-size: 14px;
 }
 
@@ -342,60 +380,78 @@ header{
 	background: #2BDE73;
 }
 
-.hover-image ul li:nth-child(1) .line{
-	margin-left: 70px;
+.details ul li:nth-child(1) .line .color-line{
+	width: 22%;
 }
 
-.hover-image ul li:nth-child(2) .line{
-	margin-left: 16px;
+.details ul li:nth-child(2) .line .color-line{
+	width: 60%;
+	background: #FFC924;
 }
 
-.hover-image ul li:nth-child(3) .line{
-	margin-left: 39px;
+.details ul li:nth-child(4) .line .color-line{
+	width: 55%;
 }
 
-.hover-image ul li:nth-child(4) .line{
-	margin-left: 64px;
+.details ul li:nth-child(5) .line .color-line{
+	width: 92%;
+	background: #FF4742;
 }
 
-.hover-image ul li:nth-child(5) .line{
-	margin-left: 64px;
+.details ul li:nth-child(1) .line{
+	margin-left: 69px;
+}
+
+.details ul li:nth-child(2) .line{
+	margin-left: 13px;
+}
+
+.details ul li:nth-child(3) .line{
+	margin-left: 23px;
+}
+
+.details ul li:nth-child(4) .line{
+	margin-left: 20px;
+}
+
+.details ul li:nth-child(5) .line{
+	margin-left: 58px;
 }
 
 /* ICONS */
-.hover-image ul li:nth-child(1){
+.details ul li:nth-child(1){
 	list-style-image: url(../images/units/pattern/risk.png);
 }
 
-.hover-image ul li:nth-child(2){
+.details ul li:nth-child(2){
 	list-style-image: url(../images/units/pattern/competition.png);
 }
 
-.hover-image ul li:nth-child(3){
+.details ul li:nth-child(3){
 	list-style-image: url(../images/units/pattern/revenue.png);
 }
 
-.hover-image ul li:nth-child(4){
+.details ul li:nth-child(4){
 	list-style-image: url(../images/units/pattern/price.png);
 }
 
-.hover-image ul li:nth-child(5){
+.details ul li:nth-child(5){
 	list-style-image: url(../images/units/pattern/time.png);
 }
 
 
 /*================ DESCRIPTION WINDOW ================*/
 .unit-description{
+	z-index: 9000;
 	margin: auto;
 	margin-left: auto;
 	margin-right: auto;
-	display: none; 
+	/*display: none; */
     position: fixed; 
-    z-index: 10; 
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
     border-radius: 4px;
     background: #fff;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -403,19 +459,113 @@ header{
 	height: 638px; 
 }
 
-.unit-description ul{
-	margin-top: 136px;
-	margin-bottom: 157px;
-	border-top: 1px solid grey;
-	border-bottom: 1px solid grey;
+.close-description{
+	padding-top: 100px;
+	margin-left: 1010px;
+	font-weight: bold;
 }
 
-.unit-description ul li{
+.description-header{
+	height: 136px;
+	width: 100%;
+	background: url(../images/background.jpg) top no-repeat;
+}
+
+.description-header h2{
+	padding-top: 30px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.nav{
+	text-align: center;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	padding-left: 20px;
+	padding-right: 20px;
+	border-top: 0.5px solid grey;
+	border-bottom: 0.5px solid grey;
+}
+
+.nav li{
 	padding: 5px 0 5px 0;
-	font-weight: 400;
-	color: #000;
 	display: inline-block;
 }
+
+.nav li a{
+	color: grey;
+}
+
+.nav li a:hover{
+	color: #008abc;
+	transition: 0.1s;
+	border-bottom: 1.6px solid #008abc;
+}
+
+.description-container{
+	padding: 20px 20px 0 20px;
+}
+
+.description-container li .line{
+	position: absolute;
+	display: inline;
+	width: 120px;
+	height: 20px;
+	border-radius: 4px;
+	background: #595657;
+}
+
+.description-container li .line .color-line{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 80%;
+	border-radius: 4px;
+	background: #FFC924;
+}
+
+.description-container{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+/* ICONS */
+.description-container li:nth-child(1){
+	list-style-image: url(../images/units/pattern/riskbl.png);
+}
+
+.description-container li:nth-child(2){
+	list-style-image: url(../images/units/pattern/competitionbl.png);
+}
+
+.description-container li:nth-child(3){
+	list-style-image: url(../images/units/pattern/revenuebl.png);
+}
+
+.description-container li:nth-child(4){
+	list-style-image: url(../images/units/pattern/pricebl.png);
+}
+
+.description-container li:nth-child(5){
+	list-style-image: url(../images/units/pattern/timebl.png);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*================	DESKTOP FIRST ================== */
@@ -426,7 +576,7 @@ header{
 		margin-left: auto;
 	}
 
-	.main-nav ul #registerBtn{
+	.main-nav ul .register{
 		display: none;
 	}
 
