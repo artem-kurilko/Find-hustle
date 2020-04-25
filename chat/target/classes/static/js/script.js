@@ -37,8 +37,8 @@ function openNav(){
 function closeNav(){
 	document.getElementById("mySidenav").style.width="0";
 }
-// Messages
 
+// Messages
 function connect() {
 	var socket = new SockJS('/chat-messaging');
 	stompClient = Stomp.over(socket);
@@ -67,7 +67,6 @@ function disconnect(){
 }
 function sendMessage(){
 	stompClient.send("/app/message", {}, JSON.stringify({'message': $("#message_input_value").val()}));
-
 }
 
 

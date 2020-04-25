@@ -27,7 +27,7 @@
 				<div id="mySidenav" class="sidenav">
 					  <a href="#">Coming soon*</a>
 					  <a href="#">Coming soon*</a>
-					  <a href="E://find your hustle/find-your-hustle-ui/src/modules/Resources/index.html">Resources</a>
+					  <a href="E://find your hustle/find-your-hustle-ui/src/modules/Resources/resources.html">Resources</a>
 					  <a href="#">Chat</a>
 					  <a href="#">Sign in</a>
 					  <a href="#">Register</a>
@@ -36,7 +36,7 @@
 				<!-- SEARCH -->
 				<div class="search col-4">
 					<form>
-					  <input type="text" placeholder="find your hustle">
+					  <input type="text" placeholder="find your hustle" id="searchInput" onkeyup="searchFunction()">
 					  <button type="submit"></button>
 					</form>
 				</div>
@@ -141,7 +141,7 @@
 	</div>
 
     <!-- UNIT LIST -->
-	<div class="unit-container">
+	<div class="unit-container" id="unitList">
 			<div class="unit">
 				<a href="#">
 					<div class="disable-image programmer">

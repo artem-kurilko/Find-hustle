@@ -46,12 +46,14 @@ header{
 
 /* LOGO */
 .brand-logo .logo{
+	
 	margin-top: 7px;
 	margin-left: 72px;
 }
 
-.brand-logo{
-	z-index: 10;
+.brand-logo img{
+	position: relative;
+	z-index: 9000;	
 }
 
 /* SEARCH */
@@ -124,6 +126,7 @@ header{
 
 /*================ BURGER MENU ================*/
 .sidenav {
+  z-index: 1040;	
   height: 100vh;
   width: 0;
   position: fixed;
@@ -181,15 +184,15 @@ header{
 }
 
 /* The Close Button */
-.close {
+.closeRegisterWindow {
   z-index: 1;
   margin-top: -20px;
   margin-left: 390px;
   font-size: 34px;
 }
 
-.close:hover,
-.close:focus {
+.closeRegisterWindow:hover,
+.closeRegisterWindow:focus {
   text-decoration: none;
   cursor: pointer;
 }
@@ -288,10 +291,10 @@ header{
 }
 
 .disable-image h1{
-	text-shadow: 1.5px 1.5px black;
+	text-shadow: 1.5px 1.5px #000;
 	font-size: 24px;
 	position: absolute;
-	margin-top: 28px;
+	margin-top: 48px;
 	width: 100%;
 	font-weight: 400;
 	top: 0;
@@ -340,8 +343,8 @@ header{
 
 /*.hover-image */
 .menu .close{
-	width: 23px;
-	height: 23px;
+	width: 21px;
+	height: 21px;
 	opacity: 1;
 } 
 
@@ -351,6 +354,7 @@ header{
 } 
 
 .hover-image ul li{
+	text-shadow: 1px 1px #000;
 	padding-bottom: 7px;
 	margin-left: 3px;
 	font-size: 14px;
@@ -376,72 +380,73 @@ header{
 	background: #2BDE73;
 }
 
-.hover-image ul li:nth-child(1) .line .color-line{
+.details ul li:nth-child(1) .line .color-line{
 	width: 22%;
 }
 
-.hover-image ul li:nth-child(2) .line .color-line{
+.details ul li:nth-child(2) .line .color-line{
 	width: 60%;
 	background: #FFC924;
 }
 
-.hover-image ul li:nth-child(4) .line .color-line{
+.details ul li:nth-child(4) .line .color-line{
 	width: 55%;
 }
 
-.hover-image ul li:nth-child(5) .line .color-line{
+.details ul li:nth-child(5) .line .color-line{
 	width: 92%;
 	background: #FF4742;
 }
 
-.hover-image ul li:nth-child(1) .line{
+.details ul li:nth-child(1) .line{
 	margin-left: 69px;
 }
 
-.hover-image ul li:nth-child(2) .line{
+.details ul li:nth-child(2) .line{
 	margin-left: 13px;
 }
 
-.hover-image ul li:nth-child(3) .line{
+.details ul li:nth-child(3) .line{
 	margin-left: 23px;
 }
 
-.hover-image ul li:nth-child(4) .line{
+.details ul li:nth-child(4) .line{
 	margin-left: 20px;
 }
 
-.hover-image ul li:nth-child(5) .line{
+.details ul li:nth-child(5) .line{
 	margin-left: 58px;
 }
 
 /* ICONS */
-.hover-image ul li:nth-child(1){
+.details ul li:nth-child(1){
 	list-style-image: url(../images/units/pattern/risk.png);
 }
 
-.hover-image ul li:nth-child(2){
+.details ul li:nth-child(2){
 	list-style-image: url(../images/units/pattern/competition.png);
 }
 
-.hover-image ul li:nth-child(3){
+.details ul li:nth-child(3){
 	list-style-image: url(../images/units/pattern/revenue.png);
 }
 
-.hover-image ul li:nth-child(4){
+.details ul li:nth-child(4){
 	list-style-image: url(../images/units/pattern/price.png);
 }
 
-.hover-image ul li:nth-child(5){
+.details ul li:nth-child(5){
 	list-style-image: url(../images/units/pattern/time.png);
 }
 
 
 /*================ DESCRIPTION WINDOW ================*/
 .unit-description{
+	z-index: 9000;
 	margin: auto;
 	margin-left: auto;
 	margin-right: auto;
-	display: none; 
+	/*display: none; */
     position: fixed; 
 	left: 0;
 	top: 0;
@@ -454,9 +459,30 @@ header{
 	height: 638px; 
 }
 
+.close-description{
+	padding-top: 100px;
+	margin-left: 1010px;
+	font-weight: bold;
+}
+
+.description-header{
+	height: 136px;
+	width: 100%;
+	background: url(../images/background.jpg) top no-repeat;
+}
+
+.description-header h2{
+	padding-top: 30px;
+	text-align: center;
+	margin: 0 auto;
+}
+
 .nav{
-	margin-top: 136px;
-	margin-bottom: 157px;
+	text-align: center;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	padding-left: 20px;
+	padding-right: 20px;
 	border-top: 0.5px solid grey;
 	border-bottom: 0.5px solid grey;
 }
@@ -472,7 +498,12 @@ header{
 
 .nav li a:hover{
 	color: #008abc;
-	transition: 0.3s;
+	transition: 0.1s;
+	border-bottom: 1.6px solid #008abc;
+}
+
+.description-container{
+	padding: 20px 20px 0 20px;
 }
 
 .description-container li .line{
@@ -494,18 +525,32 @@ header{
 	border-radius: 4px;
 	background: #FFC924;
 }
+
 .description-container{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }
 
-.horizontal-line{
-	width: 100%;
-	height: 1px;
-	color: grey;
+/* ICONS */
+.description-container li:nth-child(1){
+	list-style-image: url(../images/units/pattern/riskbl.png);
 }
 
+.description-container li:nth-child(2){
+	list-style-image: url(../images/units/pattern/competitionbl.png);
+}
 
+.description-container li:nth-child(3){
+	list-style-image: url(../images/units/pattern/revenuebl.png);
+}
+
+.description-container li:nth-child(4){
+	list-style-image: url(../images/units/pattern/pricebl.png);
+}
+
+.description-container li:nth-child(5){
+	list-style-image: url(../images/units/pattern/timebl.png);
+}
 
 
 
@@ -531,7 +576,7 @@ header{
 		margin-left: auto;
 	}
 
-	.main-nav ul #registerBtn{
+	.main-nav ul .register{
 		display: none;
 	}
 
@@ -559,10 +604,6 @@ header{
 /* Large devices, Wide Screens */
 @media only screen and (max-width: 1200px){
 	/* NAVIGATION */
-	.main-nav .register{
-		display: none;
-	}
-
 	.main-nav #comingSoonBtn1{
 		display: none;
 	}
