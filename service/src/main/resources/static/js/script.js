@@ -1,12 +1,24 @@
-// Authorization
-var modal = document.getElementById("myModal");
+// Navbar scrolling
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-74px";
+  }
+  prevScrollpos = currentScrollPos;
+}
 
-var signBtn = document.getElementsByClassName("signBtn");
+// Authorization
+var modal = document.getElementById("myModal")[0];
+
+var signBtn = document.getElementsByClassName("signBtn")[0];
 
 var span = document.getElementsByClassName("closeRegisterWindow")[0];
 
 for (var i = 0; i < signBtn.length; i++) {
-  signBtn[i].onclick = function() {
+    signBtn[i].onclick = function() {
     modal.style.display = "block";
   }
 }
