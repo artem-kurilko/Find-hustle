@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>Find your hustle</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -16,7 +16,7 @@
 	<!-- HEADER -->
 	<header class="main-header">
 		<div class="container">
-			<div class="navigation fixed-top row">
+			<div class="navigation fixed-top row" id="navbar">
 
 				<!-- ICON -->
 				<div class="brand-logo col-1">
@@ -29,8 +29,8 @@
 					  <a href="#">Coming soon*</a>
 					  <a href="E://find your hustle/find-your-hustle-ui/src/modules/Resources/resources.html">Resources</a>
 					  <a href="#">Chat</a>
-					  <a href="#">Sign in</a>
-					  <a href="#">Register</a>
+					  <a href="#" class="signBtn">Sign in</a>
+					  <a href="#" class="signBtn">Register</a>
 				</div>
 
 				<!-- SEARCH -->
@@ -42,7 +42,7 @@
 				</div>
 
 				<!-- AUTHORIZATION -->
-				<div id="myModal" class="modal">
+				<div class="myModal modal">
 				  <div class="modal-content">
 				  	<span class="closeRegisterWindow">&times;</span>
 				    <div class="header-title">
@@ -331,6 +331,46 @@
 					</div>
 				</a>
 			</div>
+
+			<div class="unit">
+				<a href="#">
+					<div class="disable-image programmer">
+						<img src="images/units/realestate/realestate.png" alt="">
+						<h1>Недвижимость</h1>
+					</div>
+
+					<div class="hover-image details">
+						<div class="menu">
+							<img src="images/units/pattern/like.png" alt="" class="like">
+							<img src="images/units/pattern/close.png" alt="" class="close">
+						</div>
+
+						<ul>
+							<li>Риск<div class="line">
+								<div class="color-line"></div>
+							</div> </li> 
+
+							<li>Конкуренция<div class="line">
+								<div class="color-line"></div>
+							</div></li> 
+
+							<li>Доходность<div class="line">
+								<div class="color-line"></div>
+							</div></li> 
+
+							<li>Инвестиции<div class="line">
+								<div class="color-line"></div>
+							</div></li> 
+
+							<li>Время<div class="line">
+								<div class="color-line"></div>
+							</div></li>
+						</ul>	
+					</div>
+				</a>
+			</div>
+
+			
 			
 	</div> 
 

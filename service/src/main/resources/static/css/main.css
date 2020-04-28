@@ -39,14 +39,14 @@ header{
 	margin-bottom: 40px;
 }
 .main-header .navigation{
-	overflow-y: hidden;
 	position: fixed;
 	margin-top: 30px;
+	top: 0;
+  	transition: top 0.4s;
 }
 
 /* LOGO */
-.brand-logo .logo{
-	
+.brand-logo .logo{	
 	margin-top: 7px;
 	margin-left: 72px;
 }

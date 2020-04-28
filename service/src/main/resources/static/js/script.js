@@ -11,20 +11,24 @@ window.onscroll = function() {
 }
 
 // Authorization
-var modal = document.getElementById("myModal")[0];
+var modal = document.getElementsByClassName("myModal");
 
-var signBtn = document.getElementsByClassName("signBtn")[0];
+var signBtn = document.getElementsByClassName("signBtn");
 
 var span = document.getElementsByClassName("closeRegisterWindow")[0];
 
 for (var i = 0; i < signBtn.length; i++) {
-    signBtn[i].onclick = function() {
-    modal.style.display = "block";
+  signBtn[i].onclick = function() {
+    for (var n = 0; n < modal.length; n++) {
+      modal[n].style.display = "block";
+    }
   }
 }
 
 span.onclick = function() {
-  modal.style.display = "none";
+  for (var n = 0; n < modal.length; n++) {
+      modal[n].style.display = "none";
+    }
 }
 
 window.onclick = function(event) {
@@ -33,7 +37,7 @@ window.onclick = function(event) {
   }
 }
 
-// Burger menu
+/* Burger menu */
 function onCount(t){
 	if (!t.i) {
 		t.i=1; 
@@ -52,7 +56,7 @@ function closeNav(){
 	document.getElementById("mySidenav").style.width="0";
 }
 
-// Search
+/* Search */
 function searchFunction() {
     var input, filter, div, li, a, i;
     input = document.getElementById("searchInput");
