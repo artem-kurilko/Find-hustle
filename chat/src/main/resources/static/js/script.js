@@ -1,4 +1,4 @@
-// Authorization
+/*// Authorization
 var modal = document.getElementById("myModal");
 
 var btn = document.getElementById("myBtn");
@@ -36,7 +36,7 @@ function openNav(){
 
 function closeNav(){
 	document.getElementById("mySidenav").style.width="0";
-}
+}*/
 
 // Messages
 function connect() {
@@ -53,13 +53,13 @@ function connect() {
 
 function draw(side, text) {
 	console.log("drawing...");
-    var $message;
-    $message = $($('.message_template').clone().html());
-    $message.addClass(side).find('.text').html(text);
-    $('.messages').append($message);
-    return setTimeout(function () {
-        return $message.addClass('appeared');
-    }, 0);
+	var $message;
+	$message = $($('.message_template').clone().html());
+	$message.addClass(side).find('.text').html(text);
+	$('.messages').append($message);
+	return setTimeout(function () {
+		return $message.addClass('appeared');
+	}, 0);
 
 }
 function disconnect(){

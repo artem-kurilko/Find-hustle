@@ -194,7 +194,6 @@ header{
 }
 
 .modal .modal-content form input{
-  padding-left: ;
   border: 1px solid #aaaaaa;
   padding-left: 10px;
     outline: none;
@@ -345,8 +344,8 @@ header{
     height: 50px;
     display: inline-block;
     border-radius: 4px;
-    background-color: #a3d063;
-    border: 2px solid #a3d063;
+    background-color: #86d2e3;
+    border: 2px solid #CACBCD;
     color: #fff;
     cursor: pointer;
     transition: all 0.2s linear;

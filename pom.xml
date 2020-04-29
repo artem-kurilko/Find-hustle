@@ -16,7 +16,6 @@
         <module>search-engine</module>
         <module>security-core</module>
         <module>service</module>
-        <module>fuckme</module>
     </modules>
 
     <properties>

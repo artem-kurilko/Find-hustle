@@ -49,7 +49,13 @@ function onCount(t){
 }
 
 function openNav(){
-	document.getElementById("mySidenav").style.width="448px";
+
+  if (document.documentElement.clientWidth >= "768") {
+	    document.getElementById("mySidenav").style.width="448px";
+  } else
+      document.getElementById("mySidenav").style.width="100%";
+
+  document.getElementById("mySidenav").style.height="100vh";     
 }
 
 function closeNav(){
