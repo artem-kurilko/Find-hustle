@@ -1,8 +1,8 @@
-package com.findyourhustle.jwtsecurity.security;
+package com.findyourhustle.security.core.security;
 
-import com.findyourhustle.jwtsecurity.model.JwtAuthenticationToken;
-import com.findyourhustle.jwtsecurity.model.JwtUser;
-import com.findyourhustle.jwtsecurity.model.JwtUserDetails;
+import com.findyourhustle.security.core.model.JwtAuthenticationToken;
+import com.findyourhustle.security.core.model.JwtUser;
+import com.findyourhustle.security.core.model.JwtUserDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider;

@@ -1,6 +1,6 @@
-package com.findyourhustle.jwtsecurity.security;
+package com.findyourhustle.security.core.security;
 
-import com.findyourhustle.jwtsecurity.model.JwtUser;
+import com.findyourhustle.security.core.model.JwtUser;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -11,8 +11,6 @@ public class JwtGenerator {
 
 
     public String generate(JwtUser jwtUser) {
-
-
         Claims claims = Jwts.claims()
                 .setSubject(jwtUser.getUserName());
         claims.put("userId", String.valueOf(jwtUser.getId()));

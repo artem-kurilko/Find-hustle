@@ -1,4 +1,4 @@
-package com.findyourhustle.jwtsecurity.resources;
+package com.findyourhustle.security.core.resources;
 
 
 import org.springframework.web.bind.annotation.GetMapping;

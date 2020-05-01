@@ -19,21 +19,21 @@
     </properties>
 
     <dependencies>
-        <!--<dependency>
+        <dependency>
             <groupId>com.findyourhustle</groupId>
             <artifactId>security-core</artifactId>
             <version>${project.version}</version>
-        </dependency>-->
+        </dependency>
         <dependency>
             <groupId>com.findyourhustle</groupId>
             <artifactId>management</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
+       <!-- <dependency>
             <groupId>com.findyourhustle</groupId>
             <artifactId>chat</artifactId>
             <version>${project.version}</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>com.findyourhustle</groupId>
             <artifactId>backaccount-changelog</artifactId>
@@ -44,7 +44,6 @@
             <artifactId>spring-boot-starter-web</artifactId>
             <version>${spring.version}</version>
         </dependency>
-
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>

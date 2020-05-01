@@ -1,4 +1,4 @@
-package com.findyourhustle.jwtsecurity.model;
+package com.findyourhustle.security.core.model;
 
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 

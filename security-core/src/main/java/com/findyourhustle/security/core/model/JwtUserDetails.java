@@ -1,4 +1,4 @@
-package com.findyourhustle.jwtsecurity.model;
+package com.findyourhustle.security.core.model;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -57,7 +57,6 @@ public class JwtUserDetails implements UserDetails {
         return true;
     }
 
-
     public String getUserName() {
         return userName;
     }
@@ -66,9 +65,7 @@ public class JwtUserDetails implements UserDetails {
         return token;
     }
 
-
     public Long getId() {
         return id;
     }
-
 }

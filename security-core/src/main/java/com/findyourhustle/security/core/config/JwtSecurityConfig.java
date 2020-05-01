@@ -1,9 +1,9 @@
-package com.findyourhustle.jwtsecurity.config;
+package com.findyourhustle.security.core.config;
 
-import com.findyourhustle.jwtsecurity.security.JwtAuthenticationEntryPoint;
-import com.findyourhustle.jwtsecurity.security.JwtAuthenticationProvider;
-import com.findyourhustle.jwtsecurity.security.JwtAuthenticationTokenFilter;
-import com.findyourhustle.jwtsecurity.security.JwtSuccessHandler;
+import com.findyourhustle.security.core.security.JwtAuthenticationEntryPoint;
+import com.findyourhustle.security.core.security.JwtAuthenticationProvider;
+import com.findyourhustle.security.core.security.JwtAuthenticationTokenFilter;
+import com.findyourhustle.security.core.security.JwtSuccessHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

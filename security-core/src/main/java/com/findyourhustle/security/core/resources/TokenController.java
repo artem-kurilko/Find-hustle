@@ -1,7 +1,7 @@
-package com.findyourhustle.jwtsecurity.resources;
+package com.findyourhustle.security.core.resources;
 
-import com.findyourhustle.jwtsecurity.model.JwtUser;
-import com.findyourhustle.jwtsecurity.security.JwtGenerator;
+import com.findyourhustle.security.core.model.JwtUser;
+import com.findyourhustle.security.core.security.JwtGenerator;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

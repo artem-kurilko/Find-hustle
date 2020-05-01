@@ -515,6 +515,11 @@ header{
 		width: 100%;
 	}
 
+	.main-window{
+		margin-left: 6%;
+		padding-left: 0;
+	}	
+
 	/* UNITS */
 	.unit-container{
 		grid-template-columns: repeat(4,minmax(197px,auto));
@@ -541,20 +546,12 @@ header{
 	}
 }
 
-
-
-
-
-
-
-/*================ DESKTOP FIRST ================*/
-
 /* Large devices, Wide Screens */
 @media only screen and (max-width: 1200px){
 	/* NAVIGATION */
 	.main-nav #comingSoonBtn1{
 		display: none;
-	}	
+	}
 }
 
 @media only screen and (max-width: 1156px){
@@ -572,7 +569,7 @@ header{
 @media only screen and (max-width: 1007px){
 	/* NAVIGATION */
 	.main-nav ul{
-		/*margin-left: -10px;*/
+		padding-left: 0;
 	}
 }
 
@@ -599,6 +596,12 @@ header{
 	}
 }
 
+@media only screen and (max-width: 827px){
+	.main-nav{
+		padding-left: 0;
+	}
+}
+
 /* Portrait tablets and small desktops */
 @media only screen and (max-width: 809px){
 	.main-nav #resourcesBtn{
@@ -606,11 +609,13 @@ header{
 	}
 
 	.main-nav ul{
-		margin-left: 6px;
+		margin-left: 80px;
+		/*padding-left: 20px;*/
 	}
 
 	.unit-container{
-		grid-template-columns: repeat(2, 1fr);
+		/*grid-template-columns: repeat(3, 1fr);*/
+		padding: 0 22px 0 22px;
 	}
 
 	.search form{
@@ -618,8 +623,7 @@ header{
 	}
 }
 
-/*================  MOBILE FIRST  ================== */
-/*767*/
+/*================  MOBILE FIRST  ==================*/
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 767px){
@@ -662,6 +666,12 @@ header{
 	}
 }
 
+@media only screen and (max-width: 630px){
+	.unit-container{
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
 @media only screen and (max-width: 556px){
 	.main-nav{
 		display: none;
@@ -669,6 +679,13 @@ header{
 
 	.disable-image h1{
 		font-size: 18px;
+	}
+}
+
+@media only screen and (max-width: 590px){
+	.main-nav .signBtn{
+		padding-left: 0;
+		margin-left: 60px;
 	}
 }
 
@@ -697,6 +714,12 @@ header{
 @media only screen and (min-width: 320px) and (max-width: 475px){
 	.unit-container{
 		grid-template-columns: repeat(1, 1fr);
+		padding: 0 22px 0 22px;
+	}
+
+	.unit{
+		margin: 0 auto;
+		max-width: 100%;
 	}
 
 	.disable-image h1{
@@ -704,12 +727,37 @@ header{
 	}
 
 	.hover-image .left-col ul li{
-		font-size: 13px;
+		font-size: 12px;
 	}
 
 	.right-col ul li{
 		width: 80%;
-		margin-bottom: 8.4px;
+		margin-bottom: 8.6px;
 	}
 }
 
+@media only screen and (min-width: 310px) and (max-width: 364px){
+	.brand-logo{
+		padding-left: 0;
+	}
+
+	.unit-container{
+		padding: 0 22px 0 22px;
+	}
+
+	.disable-image h1{
+		font-size: 20px;	
+	}
+
+	.hover-image .left-col ul li{
+		font-size: 12px;
+	}
+
+	.right-col ul li .line{
+		margin-top: -0.6px;
+	}
+
+	.search form{
+		right: 12px;
+	}
+}
