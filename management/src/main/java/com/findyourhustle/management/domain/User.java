@@ -4,14 +4,10 @@ import lombok.*;
 
 import javax.persistence.*;
 
+@Data
 @Entity
 @Table(name = "users")
-@Data
-public class User {
-//        extends BaseEntity{
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long userId;
+public class User extends BaseEntity{
 
     @Column(name = "user_name")
     private String userName;

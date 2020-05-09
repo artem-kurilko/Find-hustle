@@ -38,7 +38,7 @@ public class UserController {
     @PostMapping("/users")
     public RedirectView createUser(User user){
         if (user.getEmail() == null || user.getPassword() == null){
-//            return HttpStatus.BAD_REQUEST;
+            throw new NullPointerException();
         }
         userService.saveUser(user);
 

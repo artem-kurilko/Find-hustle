@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
 	<meta charset="UTF-8">
@@ -25,18 +25,19 @@
 
 				<!-- BURGER MENU -->
 				<div id="mySidenav" class="sidenav">
-					  <a href="#">Coming soon*</a>
-					  <a href="#">Coming soon*</a>
-					  <a href="../src/modules/Resources/resources.html">Resources</a>
-					  <a href="#">Chat</a>
-					  <a href="#" class="signBtn">Sign in</a>
-					  <a href="#" class="signBtn">Register</a>
+					  <a href="https://wordpress.com/">Конструктор сайтов</a>
+					  <a href="https://freelancehunt.com/">Найти сотрудника</a>
+					  <a href="https://rozetka.com.ua/">Поставщики</a>
+					  <a href="E:/find your hustle/find-your-hustle-ui/src/modules/Resources/resources.html">Материалы</a>
+					  <a href="../backaccount-services/chat/src/main/resources/static/index.html">Чат</a>
+					  <a href="#" class="signBtn">Войти</a>
+					  <a href="#" class="signBtn">Регистрация</a>
 				</div>
 
 				<!-- SEARCH -->
 				<div class="search col-4">
 					<form>
-					  <input type="text" placeholder="find your hustle" id="searchInput" onkeyup="searchFunction()">
+					  <input type="text" placeholder="начать бизнес" id="searchInput" onkeyup="searchFunction()">
 					  <button type="submit"></button>
 					</form>
 				</div>
@@ -49,10 +50,9 @@
 				    	<h1>Find your hustle</h1>
 					</div>
 
-					<form method="post"
-						  action="/users">
-							<input type="text" name="email" placeholder="Your email address"><br>
-						<input type="text" name="password" placeholder="Password"><br>
+					<form method="post" action="#" th:action="@{/users}" th:object="${user}">
+						<input type="email" th:field="*{email}" required name="email" placeholder="Your email address"><br>
+						<input type="password" th:field="*{password}" required name="password" placeholder="Password" autocomplete="current-password"><br>
 						<button type="submit">Join Find your hustle</button>
 					</form>
 
@@ -70,16 +70,16 @@
 				<!-- NAV -->
 				<div class="main-nav col-7">
 					<ul>
-						<li><a href="#" id="comingSoonBtn1">Coming Soon*</a></li>
-						<li><a href="#" id="comingSoonBtn2">Coming Soon*</a></li>
+						<li><a href="https://rozetka.com.ua/" id="comingSoonBtn1">Поставщики</a></li>
+						<li><a href="https://www.upwork.com/" id="comingSoonBtn2">Удаленная работа</a></li>
 						<li><a
 							id="resourcesBtn" 
-							href="../modules/Resources/resources.html">Resources</a></li>
-						<li><a id="chatBtn" href="../backaccount-services/chat/src/main/resources/static/index.html">Chat</a></li>
-						<li><a href="#" class="signBtn">Sign in</a></li>
+							href="E:/find your hustle/find-your-hustle-ui/src/modules/Resources/resources.html">Материалы</a></li>
+						<li><a id="chatBtn" href="../backaccount-services/chat/src/main/resources/static/index.html">Чат</a></li>
+						<li><a href="#" class="signBtn">Войти</a></li>
 						<li>
 							<button type="text" class="register signBtn">
-								Register
+								Регистрация
 							</button>
 						</li>
 					</ul>
@@ -89,8 +89,8 @@
 			<div class="main-window">
 				<div class="row">
 					<div class="text">
-						<h1>Find your hustle</h1>
-						<p>Live anywhere and join the new rich</p>
+						<h1>Найди свое призвание</h1>
+						<p>Живи где угодно и присоиденяйся к новым богатым</p>
 					</div>
 				</div>
 			</div>
@@ -112,12 +112,62 @@
 			<h2>Unit name</h2>
 		</div>
 		<ul class="nav">
-			<li><a href="#">Информация</a></li>
-			<li><a href="#">Материалы</a></li>
-			<li><a href="#">Кейсы</a></li>
-			<li><a href="#">Удаленная работа</a></li>
-			<li><a href="#">Чат</a></li>
-		</ul>	
+			<li><a href="#" class="active">Информация</a></li>
+			<li><a href="E:/find your hustle/find-your-hustle-ui/src/modules/Resources/resources.html">Материалы</a></li>
+			<li><a href="#" alt="кейсы">Скоро будет*</a></li>
+			<li><a href="#" alt="удаленная работа">Скоро будет*</a></li>
+			<li><a href="E:/find your hustle/backaccount-services/chat/src/main/resources/static/index.html">Чат</a></li>
+		</ul>
+
+		<ul class="information-list">
+				<li class="risk">
+					<img src="images/units/pattern/riskbl.png">Риск
+				</li>
+
+				<li class="line">
+					<div class="color-line"></div>
+				</li>
+
+				<li>	
+					<img src="images/units/pattern/competitionbl.png">Конкуренция
+				</li>
+
+				<li class="line">
+					<div class="color-line"></div>
+				</li>
+
+				<li>
+					<img src="images/units/pattern/revenuebl.png">Доходность
+				</li>
+
+				<li class="line">
+					<div class="color-line"></div>
+				</li>
+
+				<li>
+					<img src="images/units/pattern/pricebl.png">Инвестиции
+				</li>
+
+				<li class="line">
+					<div class="color-line"></div>
+				</li>
+
+				<li>
+					<img src="images/units/pattern/timebl.png">Время
+				</li>
+
+				<li class="line">
+					<div class="color-line"></div>
+				</li>
+
+				<li>
+					<img src="images/units/pattern/laptopbl.png">Работать удаленно
+				</li>
+
+				<li class="line">
+					<div class="color-line"></div>
+				</li>
+		</ul>
 	</div>
 
     <!-- UNIT LIST -->

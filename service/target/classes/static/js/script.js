@@ -103,7 +103,17 @@ window.onclick = function(event) {
   }
 }
 
+let activeInformationNav = 0;
+let informationNav = document.querySelectorAll(".nav a");
 
+for(var i = 0; i < informationNav.length; i++){
+  informationNav[i].addEventListener('click', onClickInformationNav.bind({index: i}));
+}
 
+function onClickInformationNav(){
+  informationNav[activeInformationNav].classList.remove("active");
+  activeInformationNav = this.index;
+  informationNav[this.index].classList.add("active");
+}
 
 
