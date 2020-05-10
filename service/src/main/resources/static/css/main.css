@@ -216,16 +216,16 @@ header{
 .modal .modal-content form{
 	padding-top: 40px;
 	text-align: center;
-	margin-top: 140px;
+	margin-top: 100px;
 	margin-bottom: 60px;
 }
 
 .modal .modal-content form input{
 	border: 1px solid #aaaaaa;
-	padding-left: 10px;
+	padding-left: 16px;
   	outline: none;
 	border-radius: 4px;
-	margin-bottom: 20px;
+	margin-bottom: 14px;
 	width: 374px;
 	height: 56px;
 }
@@ -233,7 +233,8 @@ header{
 .modal .modal-content form button{
 	margin-top: 14px;
 	font-size: 18px;
-	font-weight: 400;
+	font-weight: bold;
+	letter-spacing: 2px;
 	color: #fff;
 	width: 374px;
 	min-height: 40px;

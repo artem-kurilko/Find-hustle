@@ -13,17 +13,12 @@
     <artifactId>service</artifactId>
 
     <properties>
-        <spring.version>1.5.6.RELEASE</spring.version>
+        <spring.version>2.2.2.RELEASE</spring.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-            <version>1.5.2.RELEASE</version>
-        </dependency>
         <dependency>
             <groupId>com.findyourhustle</groupId>
             <artifactId>security-core</artifactId>

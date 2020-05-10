@@ -13,7 +13,7 @@
     <artifactId>security-core</artifactId>
 
     <properties>
-        <spring.version>2.2.2.RELEASE</spring.version>
+        <spring.version>1.5.6.RELEASE</spring.version>
         <jwt.version>0.6.0</jwt.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -35,12 +35,12 @@
             <artifactId>jjwt</artifactId>
             <version>${jwt.version}</version>
         </dependency>
-        <dependency>
+       <!-- <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <version>${spring.version}</version>
             <scope>test</scope>
-        </dependency>
+        </dependency>-->
 
     </dependencies>
 
