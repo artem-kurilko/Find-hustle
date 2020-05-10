@@ -39,7 +39,7 @@ window.onclick = function(event) {
 
 function saveUserData(name){
   document.cookie = "username=" + name;
-  console.log(document.cookie);
+  alert(document.cookie);
 }
 
 /* Burger menu */
