@@ -5,30 +5,24 @@ import lombok.Data;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 
 @Data
 @Entity
 @Table(name = "units")
 public class Unit extends BaseEntity{
 
-    @NotNull
-    @Column(name = "risk", length = 100)
+    @Column(name = "risk")
     private int risk;
 
-    @NotNull
-    @Column(name = "competition", length = 100)
+    @Column(name = "competition")
     private int competition;
 
-    @NotNull
-    @Column(name = "revenue", length = 100)
+    @Column(name = "revenue")
     private int revenue;
 
-    @NotNull
-    @Column(name = "investments", length = 100)
+    @Column(name = "investments")
     private int investments;
 
-    @NotNull
-    @Column(name = "time", length = 100)
+    @Column(name = "time")
     private int time;
 }

@@ -50,10 +50,11 @@
 				    	<h1>Find your hustle</h1>
 					</div>
 
-					<form method="post" action="#" th:action="@{/users}" th:object="${user}">
-						<input type="email" th:field="*{email}" required name="email" placeholder="Your email address"><br>
-						<input type="password" th:field="*{password}" required name="password" placeholder="Password" autocomplete="current-password"><br>
-						<button type="submit">Join Find your hustle</button>
+					<form method="post" action="/users" id="registerForm">
+						<input type="text" id="userLogin" name="userName" placeholder="Your name">
+						<input type="email" required name="email" placeholder="Your email address"><br>
+						<input type="password" required name="password" placeholder="Password" autocomplete="current-password"><br>
+						<button type="submit" onclick="saveUserData(document.forms['registerForm'].elements['userLogin'].value);">Join Find your hustle</button>
 					</form>
 
 					  <!--<form method="post"

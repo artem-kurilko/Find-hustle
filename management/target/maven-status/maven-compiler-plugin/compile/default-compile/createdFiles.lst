@@ -1,5 +1,5 @@
-com\findyourhustle\management\domain\UserMessage.class
 com\findyourhustle\management\services\UserService.class
+com\findyourhustle\management\domain\Unit.class
 com\findyourhustle\management\resources\UserController.class
 com\findyourhustle\management\domain\BaseEntity.class
 com\findyourhustle\management\domain\User.class

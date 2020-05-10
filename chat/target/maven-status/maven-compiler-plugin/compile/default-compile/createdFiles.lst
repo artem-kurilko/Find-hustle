@@ -1,3 +1,6 @@
+com\findyourhustle\chat\ApplicationRunner.class
+com\findyourhustle\chat\repository\MessageRepository.class
 com\findyourhustle\chat\domain\Message.class
 com\findyourhustle\chat\WebSocketConfiguration.class
 com\findyourhustle\chat\resources\ChatController.class
+com\findyourhustle\chat\service\MessageService.class

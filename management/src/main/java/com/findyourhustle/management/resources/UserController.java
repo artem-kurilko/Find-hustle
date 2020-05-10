@@ -32,7 +32,7 @@ public class UserController {
             }
         }
 
-        return userService.findById(user.getUserId());
+        return userService.findById(user.getId());
     }
 
     @PostMapping("/users")
